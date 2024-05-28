@@ -1,0 +1,17 @@
+body {
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/127/552/original/davies-designs-studio-G-6kwVnClsE-unsplash.jpg?1716767385);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Roboto;
+}
+.weather-page {
+    max-width: 600px;
+    background-color: rgb(244, 247, 247);
+    margin: 55px auto;
+    padding: 30px 60px;
+    border-radius: 15px;
+    box-shadow: 10px 12px #d9d5e3;
+}
+header {
+    padding-top: 20px;
+}
