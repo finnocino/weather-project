@@ -12,25 +12,27 @@
 <body>
     <div class="weather-page">
     <header>
-        <form>
-            <input type="text" placeholder="Enter city..." required/>
-            <input type ="submit" value="Search"/>
+        <form class="search-bar">
+            <input type="text" placeholder="Enter city..." required class="search-input"/>
+            <input type ="submit" value="Search" class="search-button"/>
         </form>
     </header>
     <main>
-        <div>
-            <h1> Paris</h1>
-            <p>
+        <div class="weather-data">
+            <div>
+            <h1 class="weather-city"> Paris</h1>
+            <p class="weather-details">
                 Saturday 22:39, clear sky
             </br>
-            Humidity: 80%, Wind: 2.57km/h
+            Humidity: <strong>80%</strong>, Wind: <strong>2.57km/h</strong>
             </p>
+           </div>
+        <div class="current-temperature">
+            <div class="icon">🌥️ </div>
+            <div class="temperature-value">20</div>
+            <div class="temperature-unit">°C</div>   
         </div>
-        <div>
-        <p>
-        🌥️ 20°C
-        </p>    
-        </div>
+    </div>
     </main>
     <footer>
         <p>
@@ -40,5 +42,6 @@
         </p>
     </footer>
 </div>
+<script src="src/index.js"></script>
 </body>
 </html>
