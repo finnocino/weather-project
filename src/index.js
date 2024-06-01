@@ -1,5 +1,5 @@
 function weatherInfo(response){
-    console.log(response.data);
+    //console.log(response.data);
     let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
     let cityNameElement = document.querySelector("#city-name");
@@ -8,7 +8,7 @@ function weatherInfo(response){
     let windElement = document.querySelector("#wind");
     let timeElement = document.querySelector("#time")
     let date = new Date(response.data.time * 1000);
-
+    let iconElement = document.querySelector("#icon");
 
     cityNameElement.innerHTML = response.data.city;
     temperatureElement.innerHTML = Math.round(temperature);
@@ -16,6 +16,7 @@ function weatherInfo(response){
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windElement.innerHTML = `${response.data.wind.speed}km/h`;
     timeElement.innerHTML = formatDate(date);
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="icon" />`;
 }
 
 function formatDate(date){
@@ -27,7 +28,6 @@ function formatDate(date){
     if (minutes < 10){
         minutes = `0${minutes}`;
     }
-
     return `${day} ${hours}:${minutes}`;
 };
 
@@ -45,6 +45,7 @@ function searchCity(event){
   
     cityName(newCity.value);
 }
+
 let searchFormElement = document.querySelector("#search-form");
 // console.log(searchFormElement);
 searchFormElement.addEventListener("submit", searchCity);
