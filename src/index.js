@@ -42,14 +42,36 @@ function cityName(city){
 function searchCity(event){
     event.preventDefault();
     let newCity = document.querySelector("#new-city");
-  
     cityName(newCity.value);
 }
+
+function displayForecast() {
+    let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function (day) {
+        forecastHtml = 
+            forecastHtml +
+             `
+        <div class="weather-forecast-day">
+            <div class="weather-date">${day}</div>
+            <div class="forecast-icon">🌧️</div>
+            <div class="forecast-temperatures">
+                <div class="forecast-temp"><strong>18°</strong>
+            </div>
+                <div class="forecast-temp">10°</div>
+                </div>
+            `;
+    });
+
+let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = forecastHtml;
+
+};
 
 let searchFormElement = document.querySelector("#search-form");
 // console.log(searchFormElement);
 searchFormElement.addEventListener("submit", searchCity);
 
-
-
-
+//searchCity("Paris");
+displayForecast();

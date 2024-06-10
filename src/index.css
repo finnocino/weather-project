@@ -11,8 +11,6 @@ body {
     padding: 20px 25px;
     border-radius: 15px;
     box-shadow: 10px 12px rgba(192, 178, 202, 0.4);
-    
-  //  #d8d7dc;
 }
 .search-input {
     background-color:#d9d5e3;
@@ -21,7 +19,7 @@ body {
     border-color: #d9d5e3;
     padding: 10px 10px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 5px;s
 }
 .search-button{
     background: #8773ba ;
@@ -60,7 +58,7 @@ a {
 .weather-details strong {
     color: blueviolet;
 }
-.current-temperature {
+.current-temperature-container {
     display: flex;
 }
 .icon {
@@ -76,6 +74,38 @@ a {
     font-size: 30px;
     margin-top: 15px;
 }
+.weather-forecast {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.weather-forecast-day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weather-date {
+    text-align: center;
+    color: rgba(39, 33, 66, 0.8);
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.weather-icon {
+    font-size: 60px;
+    text-align: center;
+}
+.forecast-temperatures {
+    text-align: center;
+    color: #f65282;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+}
+.forecast-temp {
+    padding: 0 6px;
+}
+
 footer {
     text-align: center;
     border-top: 1px solid #d9d5e3;
